@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm/MainAlarmViewController.swift"
-            timestampString = "476111872.912132"
+            timestampString = "481561401.436812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "123"
-            endingLineNumber = "123"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
             landmarkName = "MainAlarmViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -585,11 +585,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm/MainAlarmViewController.swift"
-            timestampString = "477290661.109573"
+            timestampString = "481561401.436812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "switchTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -601,11 +601,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm/MainAlarmViewController.swift"
-            timestampString = "477290661.109573"
+            timestampString = "481561401.436812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "switchTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -617,11 +617,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm/MainAlarmViewController.swift"
-            timestampString = "476099932.457545"
+            timestampString = "481561401.436812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -809,11 +809,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm/MainAlarmViewController.swift"
-            timestampString = "477304760.54481"
+            timestampString = "481561401.436812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "190"
-            endingLineNumber = "190"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "switchTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -825,11 +825,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Alarm/MainAlarmViewController.swift"
-            timestampString = "477304760.54481"
+            timestampString = "481561401.436812"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "189"
-            endingLineNumber = "189"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
             landmarkName = "switchTapped(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -959,6 +959,102 @@
             startingLineNumber = "51"
             endingLineNumber = "51"
             landmarkName = "saveEditAlarm(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alarm/MainAlarmViewController.swift"
+            timestampString = "481273404.204381"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alarm/MainAlarmViewController.swift"
+            timestampString = "481561401.436812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alarm/MainAlarmViewController.swift"
+            timestampString = "481561401.436812"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alarm/MainAlarmViewController.swift"
+            timestampString = "481561069.611879"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alarm/MainAlarmViewController.swift"
+            timestampString = "481561484.978075"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "locationManager(_:didFailWithError:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Alarm/MainAlarmViewController.swift"
+            timestampString = "481561638.66197"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

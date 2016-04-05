@@ -8,15 +8,64 @@
 
 import UIKit
 import MediaPlayer
+import CoreLocation
+//import Alamofire
 
-class MainAlarmViewController: UITableViewController{
+class MainAlarmViewController: UITableViewController, CLLocationManagerDelegate{
     
     var alarmDelegate: AlarmApplicationDelegate = AppDelegate()
     var scheduler: AlarmSchedulerDelegate = Scheduler()
+    var longitude: CLLocationDegrees = 0.0
+    var latitude: CLLocationDegrees = 0.0
+    let lm = CLLocationManager()
+    
+    /** 位置情報取得成功時 */
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]){
+        let cordinate = locations[0].coordinate
+        longitude = cordinate.longitude
+        latitude = cordinate.latitude
+        //var response = api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}
+        //print(String(longitude))
+        //print(String(latitude))
+        // create the url-request
+        let urlString = "http://api.openweathermap.org/data/2.5/forecast?lat=\(latitude)&lon=\(longitude)&APPID=eac7dd37a775f57765db49698ae94c7f"
+        //todo, error handle
+        let request = NSMutableURLRequest(URL: NSURL(string: urlString)!)
+        
+        // set the method(HTTP-GET)
+        request.HTTPMethod = "GET"
+        
+        // use NSURLSessionDataTask
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { data, response, error in
+            if (error == nil) {
+                let result = NSString(data: data!, encoding: NSUTF8StringEncoding)!
+                print(result)
+            } else {
+                print(error)
+            }
+        })
+        task.resume()
+    }
+    
+    /** 位置情報取得失敗時 */
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        NSLog("Error")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.allowsSelectionDuringEditing = true
+        
+        lm.delegate = self
+        //位置情報取得の可否。バックグラウンドで実行中の場合にもアプリが位置情報を利用することを許可する
+        lm.requestAlwaysAuthorization()
+        //位置情報の精度
+        lm.desiredAccuracy = kCLLocationAccuracyBest
+        //位置情報取得間隔(m)
+        lm.distanceFilter = 100
+        
+        // 位置情報を取得
+        lm.startUpdatingLocation()
 
     }
     

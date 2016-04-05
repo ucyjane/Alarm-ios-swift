@@ -74,12 +74,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		258966A26D7B5F54F43F7B60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9EED78631AA0F03F00961BC2 = {
 			isa = PBXGroup;
 			children = (
 				9EED786E1AA0F03F00961BC2 /* Alarm */,
 				9EED78841AA0F03F00961BC2 /* AlarmTests */,
 				9EED786D1AA0F03F00961BC2 /* Products */,
+				258966A26D7B5F54F43F7B60 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,6 +198,11 @@
 				TargetAttributes = {
 					9EED786B1AA0F03F00961BC2 = {
 						CreatedOnToolsVersion = 6.1.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					9EED78801AA0F03F00961BC2 = {
 						CreatedOnToolsVersion = 6.1.1;

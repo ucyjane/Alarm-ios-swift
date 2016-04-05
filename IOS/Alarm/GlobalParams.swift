@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 class Global
 {
     static var indexOfCell = -1
@@ -16,4 +17,5 @@ class Global
     static var weekdays: [Int] = [Int]()
     static var mediaLabel: String = "bell"
     static var snoozeEnabled: Bool = false
+   
 }
