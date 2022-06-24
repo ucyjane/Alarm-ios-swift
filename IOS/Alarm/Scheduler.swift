@@ -1,10 +1,11 @@
 //
-//  Scheduler.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by longyutao on 16/1/15.
-//  Copyright (c) 2016年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
+
 
 import Foundation
 import UIKit
@@ -34,7 +35,7 @@ class Scheduler : AlarmSchedulerDelegate
         
         let snoozeAction = UIMutableUserNotificationAction()
         snoozeAction.identifier = Id.snoozeIdentifier
-        snoozeAction.title = "Snooze"
+        snoozeAction.title = "Ertele"
         snoozeAction.activationMode = UIUserNotificationActivationMode.background
         snoozeAction.isDestructive = false
         snoozeAction.isAuthenticationRequired = false
@@ -43,7 +44,7 @@ class Scheduler : AlarmSchedulerDelegate
         let actionsArrayMinimal = snoozeEnabled ? [UIUserNotificationAction](arrayLiteral: snoozeAction, stopAction) : [UIUserNotificationAction](arrayLiteral: stopAction)
         // Specify the category related to the above actions.
         let alarmCategory = UIMutableUserNotificationCategory()
-        alarmCategory.identifier = "myAlarmCategory"
+        alarmCategory.identifier = "AlarmKategorileri"
         alarmCategory.setActions(actionsArray, for: .default)
         alarmCategory.setActions(actionsArrayMinimal, for: .minimal)
         
@@ -118,13 +119,13 @@ class Scheduler : AlarmSchedulerDelegate
     
     internal func setNotificationWithDate(_ date: Date, onWeekdaysForNotify weekdays:[Int], snoozeEnabled:Bool,  onSnooze: Bool, soundName: String, index: Int) {
         let AlarmNotification: UILocalNotification = UILocalNotification()
-        AlarmNotification.alertBody = "Wake Up!"
+        AlarmNotification.alertBody = "Uyan!"
         AlarmNotification.alertAction = "Open App"
-        AlarmNotification.category = "myAlarmCategory"
+        AlarmNotification.category = "AlarmKategorileri"
         AlarmNotification.soundName = soundName + ".mp3"
         AlarmNotification.timeZone = TimeZone.current
         let repeating: Bool = !weekdays.isEmpty
-        AlarmNotification.userInfo = ["snooze" : snoozeEnabled, "index": index, "soundName": soundName, "repeating" : repeating]
+        AlarmNotification.userInfo = ["ertele" : snoozeEnabled, "index": index, "sesAdı": soundName, "tekrarla" : repeating]
         //repeat weekly if repeat weekdays are selected
         //no repeat with snooze notification
         if !weekdays.isEmpty && !onSnooze{

@@ -1,9 +1,9 @@
 //
-//  MainAlarmViewController.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by longyutao on 15-2-28.
-//  Copyright (c) 2015年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
 
 import UIKit
@@ -109,12 +109,12 @@ class MainAlarmViewController: UITableViewController{
         let index = sender.tag
         alarmModel.alarms[index].enabled = sender.isOn
         if sender.isOn {
-            print("switch on")
+            print("açık")
             alarmScheduler.setNotificationWithDate(alarmModel.alarms[index].date, onWeekdaysForNotify: alarmModel.alarms[index].repeatWeekdays, snoozeEnabled: alarmModel.alarms[index].snoozeEnabled, onSnooze: false, soundName: alarmModel.alarms[index].mediaLabel, index: index)
             tableView.reloadData()
         }
         else {
-            print("switch off")
+            print("kapalı")
             alarmScheduler.reSchedule()
             tableView.reloadData()
         }
@@ -150,11 +150,11 @@ class MainAlarmViewController: UITableViewController{
         let dist = segue.destination as! UINavigationController
         let addEditController = dist.topViewController as! AlarmAddEditViewController
         if segue.identifier == Id.addSegueIdentifier {
-            addEditController.navigationItem.title = "Add Alarm"
+            addEditController.navigationItem.title = "Alarm ekle"
             addEditController.segueInfo = SegueInfo(curCellIndex: alarmModel.count, isEditMode: false, label: "Alarm", mediaLabel: "bell", mediaID: "", repeatWeekdays: [], enabled: false, snoozeEnabled: false)
         }
         else if segue.identifier == Id.editSegueIdentifier {
-            addEditController.navigationItem.title = "Edit Alarm"
+            addEditController.navigationItem.title = "Alarmı düzenle"
             addEditController.segueInfo = sender as! SegueInfo
         }
     }

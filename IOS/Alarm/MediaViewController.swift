@@ -1,10 +1,11 @@
 //
-//  MusicViewController.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by longyutao on 16/2/3.
-//  Copyright (c) 2016年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
+
 
 import UIKit
 import MediaPlayer
@@ -68,10 +69,10 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
             return nil
         }
         else if section == 2 {
-            return "SONGS"
+            return "SES"
         }
         else {
-            return "RINGTONS"
+            return "Zilsesleri"
         }
     }
     
@@ -88,16 +89,16 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
         }
         if indexPath.section == 0 {
             if indexPath.row == 0 {
-                cell!.textLabel!.text = "Buy More Tones"
+                cell!.textLabel!.text = "Ses alın"
             }
         }
         else if indexPath.section == 1 {
-            cell!.textLabel!.text = "Vibration"
+            cell!.textLabel!.text = "Titreşim"
             cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         }
         else if indexPath.section == 2 {
             if indexPath.row == 0 {
-                cell!.textLabel!.text = "Pick a song"
+                cell!.textLabel!.text = "Ses seç"
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
         }
@@ -121,7 +122,7 @@ class MediaViewController: UITableViewController, MPMediaPickerControllerDelegat
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let mediaPicker = MPMediaPickerController(mediaTypes: MPMediaType.anyAudio)
         mediaPicker.delegate = self
-        mediaPicker.prompt = "Select any song!"
+        mediaPicker.prompt = "Ses seç!"
         mediaPicker.allowsPickingMultipleItems = false
         if indexPath.section == 2 {
             if indexPath.row == 0 {

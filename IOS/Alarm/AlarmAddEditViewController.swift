@@ -1,10 +1,11 @@
 //
-//  AlarmAddViewController.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by longyutao on 15-3-2.
-//  Copyright (c) 2015年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
+
 
 import UIKit
 import Foundation
@@ -89,23 +90,23 @@ class AlarmAddEditViewController: UIViewController, UITableViewDelegate, UITable
             
             if indexPath.row == 0 {
                 
-                cell!.textLabel!.text = "Repeat"
+                cell!.textLabel!.text = "tekrarla"
                 cell!.detailTextLabel!.text = WeekdaysViewController.repeatText(weekdays: segueInfo.repeatWeekdays)
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             else if indexPath.row == 1 {
-                cell!.textLabel!.text = "Label"
+                cell!.textLabel!.text = "başlık"
                 cell!.detailTextLabel!.text = segueInfo.label
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             else if indexPath.row == 2 {
-                cell!.textLabel!.text = "Sound"
+                cell!.textLabel!.text = "ses"
                 cell!.detailTextLabel!.text = segueInfo.mediaLabel
                 cell!.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
             }
             else if indexPath.row == 3 {
                
-                cell!.textLabel!.text = "Snooze"
+                cell!.textLabel!.text = "ertele"
                 let sw = UISwitch(frame: CGRect())
                 sw.addTarget(self, action: #selector(AlarmAddEditViewController.snoozeSwitchTapped(_:)), for: UIControlEvents.touchUpInside)
                 
@@ -119,7 +120,7 @@ class AlarmAddEditViewController: UIViewController, UITableViewDelegate, UITable
         else if indexPath.section == 1 {
             cell = UITableViewCell(
                 style: UITableViewCellStyle.default, reuseIdentifier: Id.settingIdentifier)
-            cell!.textLabel!.text = "Delete Alarm"
+            cell!.textLabel!.text = "Alarmı sil"
             cell!.textLabel!.textAlignment = .center
             cell!.textLabel!.textColor = UIColor.red
         }

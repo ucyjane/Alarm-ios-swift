@@ -1,9 +1,9 @@
 //
-//  WeekdaysViewController.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by longyutao on 15/10/15.
-//  Copyright (c) 2015年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
 
 import UIKit
@@ -48,7 +48,6 @@ class WeekdaysViewController: UITableViewController {
             cell.accessoryType = UITableViewCellAccessoryType.none
         }
         else{
-            //row index start from 0, weekdays index start from 1 (Sunday), so plus 1
             weekdays.append(indexPath.row + 1)
             cell.setSelected(true, animated: true)
             cell.setSelected(false, animated: true)
@@ -62,11 +61,11 @@ class WeekdaysViewController: UITableViewController {
 extension WeekdaysViewController {
     static func repeatText(weekdays: [Int]) -> String {
         if weekdays.count == 7 {
-            return "Every day"
+            return "Her gün"
         }
         
         if weekdays.isEmpty {
-            return "Never"
+            return "Asla"
         }
         
         var ret = String()
@@ -77,21 +76,20 @@ extension WeekdaysViewController {
         for day in weekdaysSorted {
             switch day{
             case 1:
-                ret += "Sun "
+                ret += "pazar "
             case 2:
-                ret += "Mon "
+                ret += "Pazartesi "
             case 3:
-                ret += "Tue "
+                ret += "Salı "
             case 4:
-                ret += "Wed "
+                ret += "Çarşamab "
             case 5:
-                ret += "Thu "
+                ret += "Perşembeb "
             case 6:
-                ret += "Fri "
+                ret += "Cuma "
             case 7:
-                ret += "Sat "
+                ret += "Cumartesi "
             default:
-                //throw
                 break
             }
         }

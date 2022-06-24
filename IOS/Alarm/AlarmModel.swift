@@ -1,11 +1,11 @@
 //
-//  AlarmModel.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by longyutao on 15-2-28.
-//  Updated on 17-01-24
-//  Copyright (c) 2015年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
+
 
 import Foundation
 import MediaPlayer

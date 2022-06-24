@@ -25,13 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
         } catch let error1 as NSError{
             error = error1
-            print("could not set session. err:\(error!.localizedDescription)")
+            print("oturum acılamıyor. hata:\(error!.localizedDescription)")
         }
         do {
             try AVAudioSession.sharedInstance().setActive(true)
         } catch let error1 as NSError{
             error = error1
-            print("could not active session. err:\(error!.localizedDescription)")
+            print("oturum acılamıyor. hata:\(error!.localizedDescription)")
         }
         window?.tintColor = UIColor.red
         
@@ -47,15 +47,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         var soundName: String = ""
         var index: Int = -1
         if let userInfo = notification.userInfo {
-            isSnooze = userInfo["snooze"] as! Bool
-            soundName = userInfo["soundName"] as! String
+            isSnooze = userInfo["ertele"] as! Bool
+            soundName = userInfo["sesAdı"] as! String
             index = userInfo["index"] as! Int
         }
         
         playSound(soundName)
         //schedule notification for snooze
         if isSnooze {
-            let snoozeOption = UIAlertAction(title: "Snooze", style: .default) {
+            let snoozeOption = UIAlertAction(title: "Ertele", style: .default) {
                 (action:UIAlertAction)->Void in self.audioPlayer?.stop()
                 self.alarmScheduler.setNotificationForSnooze(snoozeMinute: 9, soundName: soundName, index: index)
             }
@@ -69,7 +69,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
             //change UI
             var mainVC = self.window?.visibleViewController as? MainAlarmViewController
             if mainVC == nil {
-                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let storyboard = UIStoryboard(name: "Ana", bundle: nil)
                 mainVC = storyboard.instantiateViewController(withIdentifier: "Alarm") as? MainAlarmViewController
             }
             mainVC!.changeSwitchButtonState(index: index)
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         var index: Int = -1
         var soundName: String = ""
         if let userInfo = notification.userInfo {
-            soundName = userInfo["soundName"] as! String
+            soundName = userInfo["sesAdı"] as! String
             index = userInfo["index"] as! Int
         }
         self.alarmModel = Alarms()
@@ -126,7 +126,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, AVAudioPlayerDelegate, Al
         }
         
         if let err = error {
-            print("audioPlayer error \(err.localizedDescription)")
+            print("oynatıcı Hatası \(err.localizedDescription)")
             return
         } else {
             audioPlayer!.delegate = self

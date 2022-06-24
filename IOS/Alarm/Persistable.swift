@@ -1,9 +1,9 @@
 //
-//  Persistable.swift
-//  Alarm-ios-swift
+//  AppDelegate.swift
+//  ucyalarm
 //
-//  Created by natsu1211 on 2017/01/25.
-//  Copyright © 2017年 LongGames. All rights reserved.
+//  Created by Uygar Çağlayan Yılmaz on 21.06.2022.
+//  Copyright © 2022 uygar. All rights reserved.
 //
 
 import Foundation
